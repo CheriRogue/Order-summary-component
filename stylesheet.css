@@ -10,11 +10,15 @@
 body {
   background-image: url(images/pattern-background-mobile.svg);
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: 110%;
+  background-position-x: center top;
+  background-size: 1600px 427px;
   font-family: "Red Hat Display", sans-serif;
   text-align: center;
   background-color: var(--primary-pale-blue);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wrapper {
@@ -48,7 +52,7 @@ h1 {
   font-weight: 500;
   line-height: 25px;
   color: var(--neutral-desaturated-blue);
-  margin-bottom: 24px;
+  margin: 0 48px 24px 48px;
 }
 
 .plan {
@@ -98,6 +102,7 @@ button {
   line-height: 20px;
   color: #ffffff;
   border-radius: 11px;
+  border: none;
   box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.2);
   padding: 15px 65px 15px 64px;
   margin-bottom: 24px;
@@ -106,6 +111,7 @@ button {
 
 button:hover {
   background-color: #766cf1;
+  cursor: pointer;
 }
 
 .quit {
@@ -117,26 +123,44 @@ button:hover {
 
 .quit:hover {
   color: black;
+  cursor: pointer;
 }
 
-@media (min-width: 390px) {
+@media (min-width: 645px) {
   .body {
     background-image: url(/images/pattern-background-desktop.svg);
-    background-repeat: no-repeat;
-    background-position-x: top;
-    
   }
 
-  
+  .plan {
+    margin: 0 48px 0 48px;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 32px 48px 32px 48px;
+  }
+
+  .plan a {
+    margin-left: 50px;
+  }
 
   .wrapper {
     width: 450px;
     height: 697px;
-    margin: 102px 495px 102px 495px;
+  }
+
+  .wrapper p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 17px 48px 20px 48px;
   }
 
   .hero img {
     width: 450px;
     height: 220px;
     margin-bottom: 45px;
+  }
 }
